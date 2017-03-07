@@ -97,14 +97,11 @@ table td {
 
 }
 .formField {
-	overflow: auto;
-	width: 60%
-	margin:5px 0;
-	text-align: center;
+	padding: 10px 220px;
 }
 label {
-	min-width: 100px;
-	width: 40%;
+	display: inline-block;
+	width: 180px;
 }
 .box6 {
 	background: black;

@@ -102,38 +102,42 @@
 		
 		<div class="box5">
 			<h2>这里以后是一个侧栏，这是侧栏的标题</h2>
-			<div class="formField">
-				<label for="email">请输入邮箱地址：</label>
-				<input id="input1" type="text" value="这是一个文本输入框">
-
-			</div >
-			<small>邮箱地址请按照要求格式输入</small>
-			<div class="formField">
-				<label for="">请输入密码：</label>
-				<input type="password" value="输入密码">
-			</div>
-			<div class="formField">				
-				<label for="">请重复输入密码：</label>
-				<input type="password" value="请再次输入密码">
-			</div>
-
-				<small>密码为6-16位英文数字</small>
-				<form action="">
+			<form action="">
+				<div class="formField">
+					<label for="email">请输入邮箱地址：</label>
+					<input id="input1" type="text" value="这是一个文本输入框">
+				</div >
+				<div class="formField">
+					<label for="">请输入密码：</label>
+					<input type="password" value="输入密码">
+				</div>
+				<div class="formField">				
+					<label for="">请重复输入密码：</label>
+					<input type="password" value="请再次输入密码">
+				</div>
+				<div class="formField">
 					<label for="">性别：</label>
 					<input type="radio" checked="checked">男
 					<input type="radio" >女
+				</div>
+				<div class="formField">
 					<label for="">城市：</label>
 					<select name="" id="">
-					<option value="" selected="selected">北京</option>
-					<option value="">上海</option>
+						<option value="" selected="selected">北京</option>
+						<option value="">上海</option>
 					</select>
+				</div>	
+				<div class="formField">
 					<label for="">爱好：</label>
 					<input type="checkbox">运动
 					<input type="checkbox">艺术
 					<input type="checkbox">科学
+				</div>	
+				<div class="formField">
 					<label for="">个人描述：</label>
 					<textarea name="" id="" cols="15" rows="2">这是一个多行输入框，请输入您的个人描述</textarea>
-					<input type="submit" value="确认提交">
+				</div>	
+					<input type="submit" value="确认提交" style="width: 94%; background:blue; text-align:center; height:50px" >
 				</form>
 			</div>
 			
