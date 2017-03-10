@@ -1,0 +1,39 @@
+.clearfix {
+	display: flex;
+	flex-direction: row;
+	width: auto;
+	margin:0 auto; 
+	background-color: #eee;
+}
+div {
+	padding: 20px;
+	border:#999 solid;
+	margin: 0 20px;
+}
+#left_div {
+	float: left;
+	width: 200px;
+	background:white;
+}
+#middle_div {
+	flex-grow: 1;
+	left: 200px;
+	right: 120px;
+	background-color: white;
+}
+#right_div {
+	float: right;
+	width: 120px;
+	background-color: white;
+}
+.logo {
+	margin: 10px;
+}
+.clearfix :after {
+	content: ".";
+	display: block;	
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
