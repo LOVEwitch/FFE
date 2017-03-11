@@ -1,0 +1,38 @@
+body {
+	position: relative;
+}
+.box {
+	width: 400px;
+	height: 200px;
+	background-color: #ccc;
+
+	padding: 20px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 120px 0 0 -220px;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.circle {
+	width: 100px;
+	height: 100px;
+	border-radius:100px; 
+	background-color: #fc0;
+
+}
+.circle1 {
+	position: absolute;
+	top: -50px;
+	left: -50px;
+
+
+}
+.circle2 {
+	position: absolute;
+	bottom: -50px;
+	right: -50px;
+}
