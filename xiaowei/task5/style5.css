@@ -1,0 +1,174 @@
+html,body {
+	margin: 0;
+	padding: 0;
+}
+
+li a{
+	color: red;
+}
+#header {
+	background: black;
+	color: white;
+	height: 80px;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.head_content {
+	
+}
+#header h1 {
+	display: inline-table;
+	float: left;
+}
+#header ul {
+	float: right;
+	height: 100%
+	vertical-align: middle;
+} 
+#header li,a{
+	display: inline;
+	list-style: none;
+	vertical-align: middle;
+} 
+.box {
+	position: relative;
+	width: 100%;
+	background: silver;
+	border: 1px solid silver;
+	margin-top: 80px;
+	padding: 10px;
+}
+.box_left {
+	float: left;
+	margin-right: 300px;
+}
+.box_right {
+	width: 250px;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	background: white;	
+	margin: 10px 20px;
+	float: right;
+	position: fixed;
+	top: 100px;
+	right: 20px;
+}
+.box_right1 {
+	width: auto;
+}
+.box1 {
+	background: white;
+	border: 1px solid silver;
+	padding: 10px 20px;
+	margin: 10px;
+}
+
+.box2 {
+	
+	background: white;
+	border: 1px solid silver;
+	padding: 10px 20px;
+	margin: 10px;
+}
+.box2 p {
+	text-indent: 3em;
+}
+.box2 ul {
+	list-style-type: none;
+}
+.box3 {
+	flex-direction: column;
+	flex-wrap: wrap;
+	background: white;
+	border: 1px solid silver;
+	padding: 10px 20px;
+	margin: 10px;
+}
+/*.box3 ul div {
+	border: 2px dotted red;
+	display: inline-block;
+	text-align: center;
+}*/
+
+.box3 div {
+	display: inline-flex;
+	border: 1px dashed ;
+	text-align: center;
+	width: 400px;
+	height:250px;
+	margin-top: 10px;
+}
+.box4 {
+	width: auto;
+	background: white;
+	border: 1px solid silver;
+	padding: 10px 20px;
+	margin: 10px;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+.clearfix {
+	zoom: 1;
+}
+table {
+	display: inline-table;
+	border: 1px solid #7a7;
+	border-collapse: collapse;
+	width: 100%;
+}
+table thead {
+	background: gray;
+	font: white;
+	color: white;
+
+}
+table tfoot {
+	background: silver;
+}
+table thead th {
+	border-left: 1px solid #7a7;
+}
+table td {
+	border: 1px solid #7a7;
+}
+
+.formField {
+	padding: 10px 220px;
+}
+label {
+	display: inline-block;
+	width: 180px;
+}
+.foot {
+	background: black;
+	text-align: center;
+	color: white;
+	height: 50px;
+	width: 100%;
+	position: relative;
+	clear: both;
+	margin: 0;
+}
+h3 {
+	font-family: "Sonti SC";
+	font-size: larger;
+	line-height: 125%;
+	text-decoration: underline;
+	font-style: italic;
+	color: silver;
+	font-weight: bold;
+}
+h4 {
+	font: 12px "Hiragino Sans GB";
+	/*font-family: "Hiragino Sans GB";*/
+	color: gray;
+}
