@@ -102,6 +102,7 @@ table td {
 label {
 	display: inline-block;
 	width: 180px;
+	text-align: right;
 }
 .box6 {
 	background: black;
