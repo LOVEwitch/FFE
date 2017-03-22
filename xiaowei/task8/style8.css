@@ -1,8 +1,16 @@
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
 .grid-container {
 	width: 100%;
-	max-width: 1280px;
-	margin-left: -20px;
-	margin-right: -20px;
+	box-sizing: border-box;
+}
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /*-- our clearfix hack --*/
@@ -12,42 +20,30 @@
 	clear: both;
 }
 
+.row > * >div {
+	background-color: #eee;
+	border: 1px solid #999;
+	height: 80px;
+}
+
 [class*='col-'] {
         float: left; 
         min-height: 1px; 
         /*-- our gutter -- */
-        padding-top: 20px;
-        padding-bottom: 20px;
-        /*border: 1px solid rgba(86,61,124,.2); */
+        box-sizing: border-box;
+        padding: 20px;
         position: relative;
-    }
-.col-1 { width: 8.33%; }
-.col-2 { width: 16.66%; }
-.col-3 { width: 25%;}
-.col-4 { width: 33.33%; }
-.col-5 { width: 41.66%;}
-.col-6 { width: 50%; }
-.col-7 { width: 58.33% }
-.col-8 { width: 66.66%; }
-.col-9 { width: 74.99%; }
-.col-10 { width: 83.33%; }
-.col-11 { width: 91.66%; }
-.col-12 { width: 100%; }
-
-/*.outline, .outline * {
-	outline: 1px solid black;
-}*/
-
-[class*='col-'] > p {
-	background-color: #ffc2c2;
-	padding: 0;
-	margin: 0;
-	text-align: center;
-	color: white;
-}
-
-@media all and (max-width: 768px;) {
-	.col-1 { width: 8.33%; }
+ }
+ [class*='col-xs-'] {
+        float: left; 
+        min-height: 1px; 
+        /*-- our gutter -- */
+        box-sizing: border-box;
+        padding: 20px;
+        position: relative;
+ }
+ @media (min-width: 768px) and (max-width: 1280px){
+ 	.col-1 { width: 8.33%; }
 	.col-2 { width: 16.66%; }
 	.col-3 { width: 25%;}
 	.col-4 { width: 33.33%; }
@@ -58,15 +54,34 @@
 	.col-9 { width: 74.99%; }
 	.col-10 { width: 83.33%; }
 	.col-11 { width: 91.66%; }
-	.col-12 { width: 100%; }
+	.col-12 { width: 100%; }	
+ }
 
-	.row .col-2:last-of-type {
-		width: 100%;
-	}
 
-	.row .col-5 ~.col-1 {
-		width: 100%;
-	}
+/*.outline, .outline * {
+	outline: 1px solid black;
+}*/
+
+[class*='col-'] > p {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	color: red;
+}
+
+@media (max-width: 768px){
+	.col-xs-1 { width: 8.33%; }
+	.col-xs-2 { width: 16.66%; }
+	.col-xs-3 { width: 25%;}
+	.col-xs-4 { width: 33.33%; }
+	.col-xs-5 { width: 41.66%;}
+	.col-xs-6 { width: 50%; }
+	.col-xs-7 { width: 58.33% }
+	.col-xs-8 { width: 66.66%; }
+	.col-xs-9 { width: 74.99%; }
+	.col-xs-10 { width: 83.33%; }
+	.col-xs-11 { width: 91.66%; }
+	.col-xs-12 { width: 100%; }
 }
 
 
