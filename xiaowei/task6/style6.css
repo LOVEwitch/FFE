@@ -330,7 +330,8 @@ body {
 	line-height: 16px;
 	word-break: break-all;
 }
-.front2_down_text2 em {
+.front2_down_text2 span {
+	display: inline-block;
 	font-size: 72px;
 	font-family: HeiTi;
 	color: #d45d5c;
