@@ -1,0 +1,51 @@
+div {
+	margin: 0;
+	padding: 20px;
+}
+.container {
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid red;
+}
+/*.container>div {
+	flex-grow: 1;
+	background-color:red;
+	border: 1px solid rgba(0,0,0,.2);
+	height: 100px;
+}*/
+.div1 {
+	width: 150px;
+	height: 120px;
+	border: 1px solid red;
+
+}
+.div2 {
+	width: 150px;
+	height: 100px;
+	border: 1px solid red;
+}
+.div3 {
+	width: 150px;
+	height: 40px;
+	border: 1px solid red;
+}
+.div4 {
+	width: 150px;
+	height: 200px;
+	border: 1px solid blue;
+}
+@media (max-width:640px) {
+	.containers {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap-reverse;
+		align-items: flex-start;
+		align-content: flex-start;
+		justify-content:space-around; ;/*主轴对齐方式*/
+		border: 1px solid red;
+	}
+}
