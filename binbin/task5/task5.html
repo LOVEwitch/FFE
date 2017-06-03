@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>binbin task4</title>
+
+<style>
+	span{
+		background-color: red;
+		margin: 20px;
+	}
+	ul li{
+		background: #F44336;
+		margin-left: 2px;
+		list-style: none;
+		width: 20px;
+		display: inline-block;
+		position: relative;
+		bottom: 0;	
+	};
+</style>
+</head>
+<body>
+	<input type="text" id="input_num">
+	<button id="left_in">左侧入</button>
+	<button id="right_in">右侧入</button>
+	<button id="left_out">左侧出</button>
+	<button id="right_out">右侧出</button>
+	<ul id="sort_text"></ul> 
+	<button id="sort">排序</button>
+
+<script type="text/javascript">
+	
+	var lister = document.getElementById("sort_text");
+	var btnrightin = document.getElementById("right_in");
+	var btnleftin = document.getElementById("left_in");
+	var btnrightout = document.getElementById("right_out");
+	var btnleftout = document.getElementById("left_out");
+
+
+	
+	var num =1;
+	function queueIn(obj) {
+		var input = document.getElementById("input_num");
+		var text = input.value;
+		if ( (text < 10) || (text >100) || (isNaN(text)) ) {
+			alert("请输入1-100的数字");
+			return null;
+		} 
+		if (num >60) {
+			alert("队列数量超过60");
+		}
+		var insert_num = document.createElement("li");
+		insert_num.innerHTML = text;
+		if(obj.id == "left_in" ) {
+			lister.insertBefore(insert_num ,lister.firstChild);
+		}
+		else {
+			lister.appendChild(insert_num);
+		}
+		insert_num.style.height = text + "px";
+		num++;
+
+	}
+
+	btnleftin.onclick = function () {
+		// body...
+		queueIn(this);
+	};
+	btnrightin.onclick = function () {
+		// body...
+		queueIn(this);
+	};
+	btnleftout.onclick = function () {
+		// body...
+		lister.removeChild(lister.firstChild);
+	};
+	btnrightout.onclick = function () {
+		// body...
+		lister.removeChild(lister.lastChild);
+	};
+
+	sort.onclick = function () {
+		// body...
+		var a = lister.children;
+		console.log(a);
+		for (var i = a.length - 1; i >= 0; i--) {
+			console.log(a[i]);
+			for (var j = i - 1; j >= 0; j--) {
+				console.log(a[j].innerHTML);
+				if (a[j].innerHTML < a[i].innerHTML) {
+					var temp = a[i].innerHTML;
+					a[i].innerHTML = a[j].innerHTML;
+					a[j].innerHTML =temp;
+				}
+			}
+		}
+		for (var i = a.length - 1; i >= 0; i--) {
+			a[i].style.height = a[i].innerHTML + "px";
+		}
+		
+	}
+
+</script>	
+</body>
+</html>
