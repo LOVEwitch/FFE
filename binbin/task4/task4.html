@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>binbin task4</title>
+
+<style>
+	span{
+		background-color: red;
+		margin: 20px;
+	}
+</style>
+</head>
+<body>
+	<input type="text" id="input_num">
+	<button id="left_in">左侧入</button>
+	<button id="right_in">右侧入</button>
+	<button id="left_out">左侧出</button>
+	<button id="right_out">右侧出</button>
+	<p id="sort_text">
+
+	</p>
+
+<script type="text/javascript">
+	var num = document.getElementById("input_num");
+	var lister = document.getElementById("sort_text");
+	var btnrightin = document.getElementById("right_in");
+	var btnleftin = document.getElementById("left_in");
+	var btnrightout = document.getElementById("right_out");
+	var btnleftout = document.getElementById("left_out");
+
+
+	btnleftin.onclick = function () {
+		// body...
+		leftIn();
+	};
+	btnrightin.onclick = function () {
+		// body...
+		rightIn();	
+	};
+	btnleftout.onclick = function () {
+		// body...
+		leftOut();
+	};
+	btnrightout.onclick = function () {
+		// body...
+		rightOut();
+	};
+
+	function leftIn() {
+		// body...
+		var insert_num = document.createElement("span");
+		insert_num.innerHTML = num.value;
+		lister.insertBefore(insert_num,lister.firstChild);
+
+	}
+	function rightIn() {
+		// body...
+		var insert_num = document.createElement("span");
+		insert_num.innerHTML = num.value;
+		lister.appendChild(insert_num);
+	}
+	function leftOut() {
+		// body...
+		lister.removeChild(lister.firstChild);
+	}
+	function rightOut() {
+		// body...
+		lister.removeChild(lister.lastChild);
+	}
+
+</script>	
+</body>
+</html>
