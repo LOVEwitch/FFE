@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>binbin task4</title>
+
+<style>
+	ul li {
+		background-color: red;
+		display: inline-block;
+		margin: 5px;
+	}
+	.result {
+		background-color: white;
+	}
+
+</style>
+</head>
+<body>
+	<textarea name="" placeholder="请输入各种字符（可以为数字、中文、英文等），并用回车，逗号（全角半角均可），顿号，空格（全角半角、Tab等均可）等符号作为不同内容的间隔隔开" id="textinput" cols="30" rows="10"></textarea>
+	<button id="insert">插入</button>
+	<input type="text" id="searchinput">
+	<button id="search">查询</button>
+	<ul id="display">
+		
+	</ul>
+<script type="text/javascript">
+	var text = document.getElementById('textinput');
+	var display = document.getElementById('display');
+	var insert = document.getElementById('insert');
+	var searchinput = document.getElementById('searchinput');
+	var search = document.getElementById('search');
+	insert.onclick = function () {
+		// body...
+		console.log(text);
+		queue = filter();
+		console.log(queue);
+		render(queue);
+		
+	}
+
+	search.onclick = function () {
+		var searchtext = searchinput.value;
+		console.log(searchtext);
+		searcher(searchtext);
+	}
+
+	function filter() {
+		// body...
+		var queue = [];
+		queue = text.value.split(/,|\r|\n|\ |、|\，/)
+		return queue;
+	}
+	function render(queue) {
+		// body...
+		for (var i = 0; i < queue.length; i++) {
+			var displaychild = document.createElement('li');
+			displaychild.innerHTML = queue[i];
+			console.log(displaychild.innerHTML);
+			display.appendChild(displaychild);
+			console.log(displaychild);
+		}
+	}
+	function searcher(searchtext) {
+		// body...
+		for (var i = 0; i <display.children.length; i++) {
+			if (searchtext != '' && display.children[i].textContent.match(searchtext)) {
+				display.children[i].className = "result";
+			}
+		}
+
+	}
+</script>	
+</body>
+</html>
