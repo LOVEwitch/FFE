@@ -1,0 +1,24 @@
+.root,.level1,.level2,.level3 {
+	border: 1px solid black;
+	margin: 5px;
+	padding: 5px;
+	float: left;
+	box-sizing: content-box;
+	background-color: #ffffff;
+}
+.root {
+	width: 800px;
+	height: 106px;
+}
+.level1{
+    width: 360px;
+    height: 84px;
+}
+.level2{
+    width: 150px;
+    height: 62px;
+}
+.level3{
+    width: 40px;
+    height: 40px;
+}
