@@ -1,0 +1,12 @@
+.root,.level1,.level2,.level3,.level4 {
+	border: 1px solid black;
+	margin: 4px;
+	padding: 5px;
+	/*float: left;*/
+	box-sizing: content-box;
+	background-color: #ffffff;
+	display: flex;
+}
+.selected {
+	background-color: green;
+}
