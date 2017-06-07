@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>binbin task1</title>
+</head>
+<body>
+	<div>
+		<label for="">名称</label>
+		<input type="text" id="checktext">
+		<button id="checkbtn">验证</button>
+		<p id="promptinfo">必填，长度为4-16个字符</p>
+	</div>
+	<script type="text/javascript">
+		var checktext = document.getElementById('checktext');
+		
+
+		var promptinfo = document.getElementById('promptinfo');
+		document.getElementById('checkbtn').onclick = function () {
+			// body...
+			var checklen = checktext.value.length;
+			console.log(checklen);
+			var len = 0;
+			for (var i = 0; i < checktext.value.length; i++) {
+				var charcode = checktext.value.charCodeAt(i);
+				if (charcode >=0 && charcode <= 128) {
+					len++;
+				} else {
+					len += 2;
+				}
+			}
+			console.log(len);
+			if (len >=4 && len <= 16) {
+				promptinfo.innerText = "名称格式正确";
+				checktext.style.border = "1px solid green";
+			} else if (len == 0){
+				promptinfo.innerText = "姓名不能为空";
+				checktext.style.border = "1px solid red";
+			} else {
+				promptinfo.innerText = "名称格式不正确";
+				checktext.style.border = "1px solid red";
+			}
+		}
+	</script>
+</body>
+</html>
