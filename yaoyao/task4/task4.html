@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>yaoyao task4</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			padding: 0;
+		}
+		table {
+			border-collapse: collapse;
+			margin: 0 auto;
+		}
+
+		tbody tr:last-child td:not(:first-child) {
+			border-bottom: 3px solid black;
+		}
+		th {
+			border-bottom: 3px solid black;
+			margin: 0;
+			border-collapse: collapse;
+			font-weight: normal;
+		}
+		th:nth-child(1) {
+			border-bottom: none;
+		}
+		th:nth-last-child(1) {
+			border-right: none;
+		}
+		th,tr {
+			width: 40px;
+			height: 40px;
+			margin: 0;
+			border-collapse: collapse;
+		} 
+		/*竖列1-10右侧*/
+		tbody tr td:nth-child(1) {
+			border-right: 3px solid black;
+		}
+		/*1-10表格内右部边框*/
+		tbody tr td:not(:nth-child(1)) {
+			border-right: 1px solid grey;
+		}
+		/*1-10表格内底部*/
+		tbody tr td:not(:first-child) {
+			border-bottom: 1px solid grey;
+		}
+		/*底部边框*/
+		tbody tr:last-child td:not(:first-child) {
+			border-bottom: 3px solid black;
+		}
+		/*最右边框*/
+		tbody tr td:last-child {
+			border-right: 3px solid black;
+		}
+		.control {
+			text-align: center;
+			margin-top: 10px;
+		}
+		#qizi {
+			height: 40px;
+			width: 40px;
+			border: none;
+			box-sizing: content-box;
+			position: relative;
+		}
+		#top {
+			height:30%;
+			background-color: blue;
+		}
+		#bottom {
+			height: 70%;
+			background-color: red;
+		}
+	</style>
+
+</head>
+<body>
+	<div>
+	在输入框中允许输入如下指令，按下按钮后，使得正方形做相应动作 <br>
+	GO：向蓝色边所面向的方向前进一格（一格等同于正方形的边长）<br>
+	TUN LEF：向左转（逆时针旋转90度）<br>
+	TUN RIG：向右转（顺时针旋转90度）<br>
+	TUN BAC：向右转（旋转180度）
+	</div>
+	<div>
+		<table>
+			<thead>
+				<tr>
+					<th></th>
+					<th>1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+					<th>6</th>
+					<th>7</th>
+					<th>8</th>
+					<th>9</th>
+					<th>10</th>	
+				</tr>			
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<div id="qizi">
+							<div id="top"></div>
+							<div id="bottom"></div>
+						</div>
+					</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="control">
+		<input type="text" id="controltext">
+		<button id="controlbtn">执行</button>
+	</div>
+	<script src="task4.js"></script>
+</body>
+</html>
