@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>binbin task2</title>
+	<link rel="stylesheet" href="task2.css">
+	<script type="text/javascript" src="task2.js"></script>
+</head>
+<body>
+	<form action="" >
+		<div>
+			<label for="username">名称</label>
+			<input type="text" id="username" onfocus="display1()" onblur="checkUsername()">
+			<br>
+			<span id="prompt1">必填，长度为4-16个字符</span>
+		</div>
+		<div>
+			<label for="password">密码</label>
+			<input type="text" id="password" onfocus="display2()" onblur="checkPassword()">
+			<br>
+			<span id="prompt2">必填，长度为6-16个字符</span>
+		</div>
+		<div>
+			<label for="repassword">密码确认</label>
+			<input type="text" id="repassword" onfocus="display3()" onblur="checkRepassword()">
+			<br>
+			<span id="prompt3">必填，与上述密码一致</span>
+		</div>
+		<div>
+			<label for="email">邮箱</label>
+			<input type="text" id="email" onfocus="display4()" onblur="checkEmail()">
+			<br>
+			<span id="prompt4">必填，格式示例xxx@xx.com</span>
+		</div>
+		<div>
+			<label for="telephone">手机</label>
+			<input type="text" id="telephone" onfocus="display5()" onblur="checkTelephone()">
+			<br>
+			<span id="prompt5">必填，长度为11个数字</span>
+		</div>
+		<button id="btn" onclick="checkAll()">确认</button>
+	</form>
+	
+	<!--<script type="text/javascript">
+		var checktext = document.getElementById('checktext');
+		
+
+		var promptinfo = document.getElementById('promptinfo');
+		document.getElementById('checkbtn').onclick = function () {
+			// body...
+			var checklen = checktext.value.length;
+			console.log(checklen);
+			var len = 0;
+			for (var i = 0; i < checktext.value.length; i++) {
+				var charcode = checktext.value.charCodeAt(i);
+				if (charcode >=0 && charcode <= 128) {
+					len++;
+				} else {
+					len += 2;
+				}
+			}
+			console.log(len);
+			if (len >=4 && len <= 16) {
+				promptinfo.innerText = "名称格式正确";
+				checktext.style.border = "1px solid green";
+			} else if (len == 0){
+				promptinfo.innerText = "姓名不能为空";
+				checktext.style.border = "1px solid red";
+			} else {
+				promptinfo.innerText = "名称格式不正确";
+				checktext.style.border = "1px solid red";
+			}
+		}
+	</script>-->
+</body>
+</html>
