@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>binbin task3</title>
+	<script src ="task3.js"></script>
+</head>
+<body>
+	<div>
+		<input type="radio" name="stulocate" id="inschool" value="inschool" onclick="changerole()">在校生
+		<input type="radio" name="stulocate" id="outschool" value="outschool" onclick="changerole()">非在校生
+	</div>	
+	<div id="inschool_model">
+		<label for="city">城市</label>
+		<select name="city" id="cityselect" onchange="selectList()">
+			<option value="bj">北京</option>
+			<option value="sh">上海</option>
+			<option value="gz">广州</option>
+		</select>
+		<label for="">学校</label>
+		<select name="" id="bjschool" >
+			<option value="">北京大学</option>
+			<option value="">清华大学</option>
+			<option value="">人民大学</option>
+		</select>
+		<select name="" id="shschool" style="display:none;">
+			<option value="">上海大学</option>
+			<option value="">交通大学</option>
+			<option value="">复旦大学</option>
+		</select>
+		<select name="" id="gzschool" style="display:none;">
+			<option value="">广州大学</option>
+			<option value="">中山大学</option>
+			<option value="">深圳大学</option>
+		</select>
+	</div>
+	<div id="outschool_model" style="display: none;">
+		<label for="">工作单位</label>
+		<input type="text">
+	</div>
+</body>
+</html>
