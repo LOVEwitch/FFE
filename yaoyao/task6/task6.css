@@ -1,0 +1,63 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+}
+button {
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 20px;
+    background: #999;
+    color: #fff;
+}
+#bac {
+	height: 1080px;
+	position: relative;
+}
+#btn {
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+.mask {
+	position: absolute;
+	background-color: silver;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	z-index: 2;
+}
+.panel {
+	width: 400px;
+	height: 300px;
+	position: fixed;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	z-index: 3;
+	background-color: #eee;
+	border-radius: 10px;
+}
+h1 {
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    background-color: #999;
+    color: #fff;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+p {
+	padding-left: 10px;
+}
+.panbottom {
+	position: absolute;
+    right: 0;
+    bottom: 20px;
+}
