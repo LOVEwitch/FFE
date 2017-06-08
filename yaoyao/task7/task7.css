@@ -1,0 +1,81 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	position: relative;
+}
+table {
+	position: absolute;
+	border-collapse: collapse;
+	border: 1px solid black;
+	width: 500px;
+	text-align: center;
+	left: 50%;
+	top:100px;
+	transform: translate(-50%,-50%);
+	font-size: 20px;
+}
+thead {
+	background: rgb(91, 91, 91);
+}
+th {
+	border: 1px solid black;
+}
+/*
+以css方式添加上下三角形
+thead th:nth-child(n+2):before {
+    content: "";
+    border: 8px solid #fff;
+    border-top: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    position: relative;
+    top: -23px;
+    left: 60px;
+    cursor: pointer;
+}
+thead th:nth-child(n+2):after {
+    content: "";
+    border: 8px solid #fff;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    position: relative;
+    cursor: pointer;
+    top: 25px;
+    left: 4px;
+}
+*/
+td  {
+	border: 1px solid black;
+}
+.btnup {
+	width: 0;
+    height: 0;
+    border: 8px solid #fff;
+    border-top: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    position: relative;
+    cursor: pointer;
+    /* top: -3px; */
+    top: -25px;
+    /* left: 100px; */
+    /* right: 8px; */
+    display: inline;
+}
+.btndown {
+	width: 0;
+    height: 0;
+    border: 8px solid #fff;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    position: relative;
+    cursor: pointer;
+    top: 23px;
+    /* left: 100px; */
+    display: inline;
+    right: 16px;
+}
